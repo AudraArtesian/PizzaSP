@@ -2,14 +2,15 @@ package com.epam.pizza.model.products;
 
 import java.util.List; //импотирование библиотеки для list
 
-public class Pizza {
+public class Pizza extends Product {
     private String pizza_type;
     private String nutritional_value;
     private int cCal;
     private List<Ingredients> ingredients;
 
     //конструктор
-    public Pizza(String pizza_type, String nutritional_value, int cCal, List<Ingredients> ingredients) {
+    public Pizza(String product_name, int product_value, String pizza_type, String nutritional_value, int cCal, List<Ingredients> ingredients) {
+        super(product_name, product_value);
         this.pizza_type = pizza_type;
         this.nutritional_value = nutritional_value;
         this.cCal = cCal;
