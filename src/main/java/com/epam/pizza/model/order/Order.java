@@ -1,4 +1,6 @@
 package com.epam.pizza.model.order;
+import com.epam.pizza.model.products.Drink;
+import com.epam.pizza.model.products.Pizza;
 import com.epam.pizza.model.products.Product;
 
 import java.util.ArrayList;
@@ -68,4 +70,21 @@ public class Order {
         return sum;
     }
 
+    public boolean addProduct (Product new_product){
+        if (new_product instanceof Pizza) { //если продукт принадлежит к пицце
+            if (amount_pizza <= 4) {
+                products.add(new_product);
+                amount_pizza ++;
+                return true;
+            }
+        }
+        else if (new_product instanceof Drink){
+            if (amount_drink <= 3) {
+                products.add(new_product);
+                amount_drink ++;
+                return true;
+            }
+        }
+        return false;
+    }
 }
