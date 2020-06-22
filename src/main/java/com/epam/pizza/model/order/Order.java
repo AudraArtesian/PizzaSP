@@ -56,7 +56,16 @@ public class Order {
         return address;
     }
 
-    public Pay_method getPay_method() {
+    public Pay_method getPay_method() { //getter
         return pay_method;
     }
+
+    public int sum(){
+        int sum = 0;
+        for (Product product : products) { //тип  имя : откуда берут
+            sum += product.getProduct_value();
+        }
+        return sum;
+    }
+
 }
