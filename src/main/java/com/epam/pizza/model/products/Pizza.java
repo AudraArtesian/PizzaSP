@@ -6,9 +6,6 @@ public class Pizza {
     private String pizza_type;
     private String nutritional_value;
     private int cCal;
-
-
-
     private List<Ingredients> ingredients;
 
     //конструктор
